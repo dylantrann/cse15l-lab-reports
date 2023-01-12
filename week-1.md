@@ -67,10 +67,10 @@ Some helpful commands to use are:
 * `cp`: copy; copies groups of files in the directory
 * `cat`: concatenate; combines mutliple files together
 
-Try out these commands with different paths to test different results. You can also try to access other peoples' files using `/home/linux/ieng6/cs15lwi23/cs15lwi23***` in which the triple asterisk are another persons username. 
+Try out these commands with different paths to test different results. You can also try to access other peoples' files using `/home/linux/ieng6/cs15lwi23/cs15lwi23***` in which the triple asterisk are another person's username. 
 
 You might also want to test out the commands on your own personal terminal. To leave the remote terminal, simply press ctrl + D together or type the command exit. It should show a success message if it worked. 
 
-![Image](closed terminal.png)
+![Image](closed_terminal.png)
 
 With that, you should also be able to test the commands on your own terminal as well.
