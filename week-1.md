@@ -71,6 +71,6 @@ Try out these commands with different paths to test different results. You can a
 
 You might also want to test out the commands on your own personal terminal. To leave the remote terminal, simply press ctrl + D together or type the command exit. It should show a success message if it worked. 
 
-![Image](closed_terminal.png)
+![Image](closedterminal.png)
 
 With that, you should also be able to test the commands on your own terminal as well.
