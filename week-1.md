@@ -11,10 +11,25 @@ We'll do this in three steps:
 Visual Studio Code (or VSCode for short) is the primary code editor you'll be using, as it
 supports many different languages and has tools which will make our lives a lot easier.
 
-Go to [this website](https://code.visualstudio.com/) and install the correct version of
-VSCode for your operating system.
+First, go to [this website](https://code.visualstudio.com/). Here you will find the installer for VSCode.
 
-Once downloaded, open it up and it should look something like this. If yours is in a different color 
+If you **are on windows**, press the large blue button titled "Download for Windows" located in the middle left of the screen and it should download the VSCodeUserSetup.
+
+![Image](vsc3.png)
+
+If you **are on any other operating system**, press the arrow pointing down that's attached on the right of the "Download for Windows" button.
+
+![Image](vsc1.png)
+
+From there, locate the correct operating system and press the right most arrow next to it, which should download the stable version.
+
+![Image](vsc2.png)
+
+Once the download is finished, open it up the VSCodeUserSetup file. It will open a small window that will request you to accept the agreement then select additional tasks. Once thats been completed, the "next" button on the bottom right should say "install", in which you should press it and the actual isntallation of VSCode will take place.
+
+![Image](vscinstal.png)
+
+Once VSCode is done installing, open it up. It should look something like this. If yours is in a different color 
 or has different UI than the photo below, it's okay since those are aspects unique to each operating system.
 
 ![Image](vsc.png)
@@ -74,3 +89,12 @@ You might also want to test out the commands on your own personal terminal. To l
 ![Image](closedterminal.png)
 
 With that, you should also be able to test the commands on your own terminal as well.
+
+Here are some example tests I ran on my server.
+
+![image](https://user-images.githubusercontent.com/122491673/214455503-dc442994-6c81-4fcc-ac2f-81c7466f9bd8.png)
+
+I used the remote terminal to test the commands. I used `cd` first and nothing happened because I didn’t choose a directory to change to. I then used both `ls` and `ls /home/linux/ieng6/cs15lwi23/cs15lwi23amz`, which is my username. Both come up with the same results because without a given directory, it just defaulted to my current. Finally I used `ls /home/linux/ieng6/cs15lwi23/cs15lwi23alr`, which was with my labmate Ryan’s username and it didn’t work because I don’t have access to his files.
+
+Try testing those tests out yourself and see how they compare!
+
