@@ -70,4 +70,49 @@ In the image above, I added the word "cat" to the server. Now it's stored in the
 Here we add the word "doggy", and as you can see "cat" is still there in addition to the new word "doggy".
   
 ## Functionality
-Let's take a look at `StringServer.java` itself. Here we see
+Let's take a look at `StringServer.java` itself. When the file is ran in terminal, the `main method` is run. 
+    
+```
+public class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+```
+
+The main method's parameter "args" is the port of the server. The method starts by checking if a port was given, if not it would display an error and prompt the host to try again. One a successful port is given, the server is started through the `Server.java` file.
+
+```
+class Handler implements URLHandler {
+    ArrayList<String> arr = new ArrayList<>();
+    
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return makeString(arr);
+        }
+        else if (url.getPath().equals("/add-message")) {
+            String[] parameters = url.getQuery().split("=");
+            arr.add(parameters[1]);
+            return makeString(arr);
+        }
+        return "404 Not Found!";
+    }
+
+    public String makeString(ArrayList<String> arr) {
+        String str = "";
+
+        for (int i = 0; i < arr.size(); i++) {
+            str = str + arr.get(i) + "\n";
+        }
+
+        return str;
+    }
+}
+```
