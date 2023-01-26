@@ -212,3 +212,5 @@ static int[] reversed(int[] arr) {
 ```
 
 With the fixed code, the method runs as expected and both JUnit tests are passed. It was a simple switch of the two variables in the for loop as well as swapping the return from `arr` to `newArray`.
+    
+![image](https://user-images.githubusercontent.com/122491673/214776199-2a26a8a1-cf5a-4655-8501-fec6e7d435f7.png)
