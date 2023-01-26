@@ -70,7 +70,7 @@ In the image above, I added the word "cat" to the server. Now it's stored in the
 Here we add the word "doggy", and as you can see "cat" is still there in addition to the new word "doggy".
   
 ## Functionality
-Let's take a look at `StringServer.java` itself. When the file is ran in terminal, the `main method` is run. 
+Let's take a look at `StringServer.java` itself. When the file is ran in terminal, the main method is processed.
     
 ```
 public class StringServer {
@@ -87,7 +87,7 @@ public class StringServer {
 }
 ```
 
-The main method's parameter "args" is the port of the server. The method starts by checking if a port was given, if not it would display an error and prompt the host to try again. One a successful port is given, the server is started through the `Server.java` file.
+The main method's parameter "args" is the port of the server. The method starts by checking if a port was given. If it wasn't, it will display an error and prompt the host to try again. Then, the first arg is parseInted to an Integer type so it can be used as the port. Once the  port is processed, the server is started through the `Server.java` file.
 
 ```
 class Handler implements URLHandler {
@@ -116,3 +116,44 @@ class Handler implements URLHandler {
     }
 }
 ```
+
+Above is the `Handler` class, which deals with the url input. The class begins by initializing a string ArrayList called `arr`. `arr` is used to store all inputs by the user. 
+
+```
+public String handleRequest(URI url) {
+    if (url.getPath().equals("/")) {
+        return makeString(arr);
+    }
+    else if (url.getPath().equals("/add-message")) {
+        String[] parameters = url.getQuery().split("=");
+        arr.add(parameters[1]);
+        return makeString(arr);
+    }
+    return "404 Not Found!";
+}
+```
+
+The first method in `Handler` is `handleRequest`. This method is what goes through the url input to determine what action to take.
+
+1. If there is no added path, it will return the current state of `arr`. 
+2. If the path is "/add-message", it will read the query and add the string after the "=" to `arr`. Then it will return the current state of `arr`.
+3. If the path is invalid, return an error "404 Not Found!"
+
+As you might observe, there is a method called `makeString` included everytime arr is returned.
+
+```
+public String makeString(ArrayList<String> arr) {
+    String str = "";
+
+    for (int i = 0; i < arr.size(); i++) {
+        str = str + arr.get(i) + "\n";
+    }
+
+    return str;
+}
+```
+
+`makeString` does as it sounds, it formats `arr` into a string. It does so by going through each element of the ArrayList and adding it to a string, with newlines between each element. This is necessary because the `handleRequest` method's return type is String and `arr` is an ArrayList.
+
+# Part 2: Debugging
+
