@@ -157,3 +157,19 @@ public String makeString(ArrayList<String> arr) {
 
 # Part 2: Debugging
 
+As a part of Week 3's Lab, we were given many files which contained buggy methods. One such file was `ArrayExamples.java`, which consisted of two buggy methods. One of which was `reverse`.
+
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
+
+This method was supposed to take an array `arr` and return a new copy with it's contents in reverse order. For example, an array of {1, 2, 3} is supposed to return a new array containing {3, 2, 1}. The actual array returned was one consisting of all zeros: {0, 0, 0}. 
+
+
+This was because the code mixed up the assignment in the for loop, assigning the new empty array `newArray`'s values to the parameter array `arr`. 
