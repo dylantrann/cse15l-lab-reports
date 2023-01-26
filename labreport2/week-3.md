@@ -183,9 +183,9 @@ While this test passed, the code itself has a major bug which wasn't accounted f
 
 ![image](https://user-images.githubusercontent.com/122491673/214774360-52a88753-cc1b-4957-9faf-1cec9baf7aaf.png)
 
-The photo above shows the original JUnit test plus another test I added. The test checks the error in two ways. First is by checking the new array. It should have been {3, 2, 1} but instead was {0, 0, 0}. Second is by checking the original array. Since the `reversed` method was supposed to create a new array, the original shouldn’t have been tampered with. Checking `arr` after using the reversed method, it ended up becoming {0, 0, 0} when it should have been {1, 2, 3}.
+The photo above shows the original JUnit test plus another test I added. The test checks the error in two ways. First is by checking the new array. It should have been {3, 2, 1} but instead was {0, 0, 0}. Second is by checking the original array. Since the `reversed` method was supposed to create a new array, the original shouldn’t have been tampered with. Checking `arr` after using the reversed method, it ended up becoming {0, 0, 0} when it should have been {1, 2, 3}. 
 
-This was because the code mixed up the assignment in the for loop, assigning the new empty array `newArray`'s values to the parameter array `arr`. 
+This was because the code mixed up the assignment in the for loop. The method assigns the new empty `newArray`’s values to the old `arr`, causing both of the arrays to become empty. 
 
 Original method:
 
@@ -211,6 +211,14 @@ static int[] reversed(int[] arr) {
   }
 ```
 
-With the fixed code, the method runs as expected and both JUnit tests are passed. It was a simple switch of the two variables in the for loop as well as swapping the return from `arr` to `newArray`.
+With the fixed code, the method runs as expected and both JUnit tests are passed. It was a simple switch of the two variables in the for loop as well as swapping the return from `arr` to `newArray`. This allows `arr`'s values to be assigned into `newArray` in reverse order, created a reversed copy without effecting the original.
     
 ![image](https://user-images.githubusercontent.com/122491673/214776199-2a26a8a1-cf5a-4655-8501-fec6e7d435f7.png)
+
+## Reflection
+
+From these last two labs, I've learned a lot. I learned a bit about how servers are hosted. You can run methods through the url, use the query to take inputs, and store inputs for all users.  
+
+A big thing I've taken from these labs is writing JUnit tests and learning a debugging method. I've become pretty efficent at creating and using JUnit tests, which is extremely helpful when debugging. Being able to test codes at the click of a button as well as pin point the part of error is really helpful. I also learned that a test can still pass even when it wasn't expected as expected. I understood it was a possiblity but didn't think much of it, until it happened to me.
+
+I hope I can continue to learn more about code with the upcoming labs too :)
