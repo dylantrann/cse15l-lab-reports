@@ -171,5 +171,6 @@ static int[] reversed(int[] arr) {
 
 This method was supposed to take an array `arr` and return a new copy with it's contents in reverse order. For example, an array of {1, 2, 3} is supposed to return a new array containing {3, 2, 1}. The actual array returned was one consisting of all zeros: {0, 0, 0}. 
 
+![image](https://user-images.githubusercontent.com/122491673/214774360-52a88753-cc1b-4957-9faf-1cec9baf7aaf.png)
 
 This was because the code mixed up the assignment in the for loop, assigning the new empty array `newArray`'s values to the parameter array `arr`. 
