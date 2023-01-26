@@ -169,8 +169,46 @@ static int[] reversed(int[] arr) {
   }
 ```
 
-This method was supposed to take an array `arr` and return a new copy with it's contents in reverse order. For example, an array of {1, 2, 3} is supposed to return a new array containing {3, 2, 1}. The actual array returned was one consisting of all zeros: {0, 0, 0}. 
+This method was supposed to take an array `arr` and return a new copy with it's contents in reverse order. For example, an array of {1, 2, 3} is supposed to return a new array containing {3, 2, 1}. The code is tested with a JUnit test, which is passed when ran.
+
+```
+@Test
+  public void testReversed() {
+    int[] input1 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+  }
+```
+
+While this test passed, the code itself has a major bug which wasn't accounted for with this test.Using the same example as before, if `arr` was {1, 2, 3}, the actual array returned would be {0, 0, 0} when the expected is {3, 2, 1}. 
 
 ![image](https://user-images.githubusercontent.com/122491673/214774360-52a88753-cc1b-4957-9faf-1cec9baf7aaf.png)
 
+The photo above shows the original JUnit test plus another test I added. The test checks the error in two ways. First is by checking the new array. It should have been {3, 2, 1} but instead was {0, 0, 0}. Second is by checking the original array. Since the `reversed` method was supposed to create a new array, the original shouldn’t have been tampered with. Checking `arr` after using the reversed method, it ended up becoming {0, 0, 0} when it should have been {1, 2, 3}.
+
 This was because the code mixed up the assignment in the for loop, assigning the new empty array `newArray`'s values to the parameter array `arr`. 
+
+Original method:
+
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
+
+Fixed method:
+
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1]; //newArray is swapped with arr
+    }
+    return newArray; //newArray is returned instead of arr
+  }
+```
+
+With the fixed code, the method runs as expected and both JUnit tests are passed. It was a simple switch of the two variables in the for loop as well as swapping the return from `arr` to `newArray`.
