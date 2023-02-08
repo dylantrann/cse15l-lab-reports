@@ -1,6 +1,7 @@
 # Lab Report 3
 For this lab report, we were given the option to research any of the three different commands: `grep`, `find`, and `less`. I decided to choose `less` since its the command we have the least experience with. I've looked into four different options that help modify the way `less` is used. For the most part, I used [this website](https://phoenixnap.com/kb/less-command-in-linux) to find interesting options for `less` and learned how they worked by testing it on my own in VSCode. 
 
+Also, since I'm using `less`, it's a little bit hard to copy the exact output and paste it in block code. Instead, I took as many photos as I needed and put the input it block code. This was my solution and I hope it worked well!
 
 ## Auto Exit: `-e`
 The first one I looked into was `-e`. At first glance it seems really basic but it's actually really convient for reading multiple connected articles.
