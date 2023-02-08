@@ -73,4 +73,24 @@ And we can continue where we left off!
 
 Basically, `-X` is a useful option since it allows you to keep your traces of `less` so you can remember what you've previously seen without having to re-transverse the entire file once more. Of course, sometimes you might not want to keep the file's contents there, which is why `-X` is also a situational option and should only be used when the situation calls for it.
 
-## 
+## Line Numbering: `-N`
+
+Using the option `-N` adds line numbers to the left of the text, which tells you exactly which lines are being displayed from the file. 
+
+Here's an example using `$ less -N travel_guides/berlitz1/HandRIsrael.txt`:
+
+![image](https://user-images.githubusercontent.com/122491673/217446547-a0834b0c-f041-40d6-aa84-d044095c5036.png)
+
+As you can see, each line is numbered just as the file itself is.
+
+Here's another example, using larger line sizes with `$ less -N travel_guides/berlitz2/Amsterdam-History.txt`:
+
+![image](https://user-images.githubusercontent.com/122491673/217447029-c59cfd15-83f0-48b0-b618-702de57762ce.png)
+
+On the right, you might notice some numbers are repeating. This is because the line numbering matches the file. Since the terminal isn't infinitely wide as a file, it splits the file's extremely long lines into multiple lines, but keeps the line number consistent. 
+
+`-N` is extremely helpful if you have access to the actual file. Since you are able to see the exact line number, you don't have to waste time searching throughout the entire file. You can directly find your spot from the terminal in the actual file with more efficency. 
+
+---
+
+As I mentioned before I used [this website](https://phoenixnap.com/kb/less-command-in-linux) to find all of the options but I tested them and found situations in which they'd be useful on my own. I hope my research was worth it's time and thanks for reading!
