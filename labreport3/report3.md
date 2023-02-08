@@ -93,4 +93,4 @@ On the right, you might notice some numbers are repeating. This is because the l
 
 ---
 
-As I mentioned before I used [this website](https://phoenixnap.com/kb/less-command-in-linux) to find all of the options but I tested them and found situations in which they'd be useful on my own. I hope my research was worth it's time and thanks for reading!
+As I mentioned before, I used [this website](https://phoenixnap.com/kb/less-command-in-linux) to find all of the options but I tested them and found situations in which they'd be useful on my own. I hope my research was worth it's time and thanks for reading!
