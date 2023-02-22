@@ -19,4 +19,24 @@ Without further ado, let's get started!
 This is a setup only required if these steps have been previously replicated. By clearing the fork, we're able to reset our tests and try again. This might not be
 useful for a first timer but I thought it was still useful to include this, since it's something I didn't originally know how to do. 
 
-To delete your repository, first visit it on GitHub. When viewing it, 
+To delete your repository, first visit it on GitHub. When viewing it, press the repository specific settings button located in the top middle of the screen.
+![image](https://user-images.githubusercontent.com/122491673/220776075-c016271f-eaa9-4ff8-be4c-9b99aaabc351.png)
+
+
+Then, scroll all the way down to the bottom until you locate the "Delete this repository" button. Press it.
+![image](https://user-images.githubusercontent.com/122491673/220776506-7e336701-e8cd-48b4-a1cc-b2c21474c045.png)
+
+It will then prompt you to type out the repository's path to confirm your decision. Once you do, you should be able to delete the repository and all its contents.
+
+## Step 2: Fork a Repository
+This is something we've done multiple times but it doesn't hurt to see it again. 
+
+Visit the repository you want to fork (in our case, [lab7](https://github.com/ucsd-cse15l-w23/lab7)).
+
+Press the fork button on the top right corner of the repository. 
+![image](https://user-images.githubusercontent.com/122491673/220777215-14134e55-2a79-4aca-bfee-5edc3fae5727.png)
+
+Then, press "Create fork" and you're done!
+![image](https://user-images.githubusercontent.com/122491673/220777312-08c6d554-6d41-43d8-8a7b-f93f2758b9bb.png)
+
+## Step 3: Logging into ieng6 Server
