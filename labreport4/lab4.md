@@ -72,7 +72,7 @@ Cloning `lab7`, we've created a copy of the repository as a directory in our ser
 
 `cd lab7/`
 
-When I actually typed out the command, I only typed `cd l` and then pressed <tab>, which auto completed the words "lab7/", shortcutting the typing process. This can help avoid spelling errors or wasting time typing out longer names.
+When I actually typed out the command, I only typed `cd l` and then pressed `<tab>`, which auto completed the words "lab7/", shortcutting the typing process. This can help avoid spelling errors or wasting time typing out longer names.
 
 You can tell we successfully changed directories by looking at the terminal's display. Following the colon after your bracketed username, it displays `currDirectory:lineNumber`. Meaning that since first text after my username is `lab7`, I know I successfully changed directories to `lab7`. 
   
@@ -102,15 +102,15 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
   
   ![image](https://user-images.githubusercontent.com/122491673/220802931-d04bc2cb-6942-4168-a411-7517761670b9.png)
 
-  To transerse the file, we use the arrow keys to move up and down. The actual error is located near the bottom, in which index1 should be replaced with index2. To get there, I pressed <down arrow> 42 times. To edit it, I pressed <right arrow> 12 times, putting my cursor right before the 1. I then pressed <backspace> followed by a <2>. 
+  To transerse the file, we use the arrow keys to move up and down. The actual error is located near the bottom, in which index1 should be replaced with index2. To get there, I pressed `<down arrow>` 42 times. To edit it, I pressed `<right arrow>` 12 times, putting my cursor right before the 1. I then pressed `<backspace>` followed by a `<2>`. 
   
   ![image](https://user-images.githubusercontent.com/122491673/220803397-307e8a72-28db-4750-ae3a-e0024c8d526b.png)
   
-  To save the changes we've made, we press <ctrl + O>, the command known as "WriteOut". You might not notice, but on the bottom, this will prompt you to enter a name for the file. Since we don't have to change the current name, we don't type anything and just press <enter> to confirm.
+  To save the changes we've made, we press `<ctrl + O>`, the command known as "WriteOut". You might not notice, but on the bottom, this will prompt you to enter a name for the file. Since we don't have to change the current name, we don't type anything and just press `<enter>` to confirm.
   
   ![image](https://user-images.githubusercontent.com/122491673/220804359-b64607f0-a983-4ba1-a423-fd90b769b17c.png)
 
-  To exit, use <ctrl + X> and it will immediately exit the display and return you to the normal terminal.
+  To exit, use `<ctrl + X>` and it will immediately exit the display and return you to the normal terminal.
   
   ## Step 7: Rerun the Tests
   We'll just be repeating **Step 5** but we'll be getting a different result. As with **Step 5**, we'll use:
