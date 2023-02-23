@@ -9,8 +9,8 @@ Here are the actual steps involved in the process:
 4. Clone your fork of the repository from your Github account.
 5. Run the tests, demonstrating that they fail.
 6. Edit the code file to fix the failing test.
-8. Run the tests, demonstrating that they now succeed.
-9. Commit and push the resulting change to your Github account.
+7. Run the tests, demonstrating that they now succeed.
+8. Commit and push the resulting change to your Github account.
 
 For this entire process, we'll be using a fork of [this repository](https://github.com/ucsd-cse15l-w23/lab7), which I'll be referring to as `lab7`. 
 Without further ado, let's get started!
@@ -110,4 +110,37 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
   
   ![image](https://user-images.githubusercontent.com/122491673/220804359-b64607f0-a983-4ba1-a423-fd90b769b17c.png)
 
-  To exit, 
+  To exit, use <ctrl + X> and it will immediately exit the display and return you to the normal terminal.
+  
+  ## Step 7: Rerun the Tests
+  We'll just be repeating **Step 5** but we'll be getting a different result. As with **Step 5**, we'll use:
+  
+  ```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+  ```
+  
+  It should give us a successful test result.
+  
+  ![image](https://user-images.githubusercontent.com/122491673/220818423-2462ce61-3614-4114-92f7-402692e8059c.png)
+
+  ## Step 8: Committing and Pushing to GitHub
+  Now that we've fixed the error and the test runs fine, we'll have to commit our updates and push them to GitHub. Committing our updates is like confirming the changes we've made and pushing is the same as sending those confirmed changes back to GitHub. 
+  
+  Before we can commit or push, we first have to add the file we've changed. To do so, we use the `git add` command:
+  
+  `git add ListExamples.java`
+  
+  This adds the updated file to my `.git` folder, which holds all the changes we want to commit. To commit those files, we use the `git commit` command. In this command, we include an option, `-m`, to add a message explaining the changes we've made. The actual command I used is this:
+  
+  `git commit -m "Fixed ListExamples.java"`
+  
+  A successful commit should display a message similar to the one shown below. At the bottom of the message, it displays the actual changes that occurred. In our case, we changed one file, `ListExamples.java`, and made one insertion and deletetion, changing the 1 to a 2. 
+  
+  ![image](https://user-images.githubusercontent.com/122491673/220819452-b35e31a9-b661-4a00-9550-263d56fa0c90.png)
+
+  Finally, we have to push these changes back to GitHub. To do so, we use the `git push` command, which is literally typed out as:
+  
+  `git push`
+  
+  
