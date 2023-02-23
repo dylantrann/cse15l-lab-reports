@@ -143,4 +143,14 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
   
   `git push`
   
+  It will provide a success message such as the one displayed below.
   
+  ![image](https://user-images.githubusercontent.com/122491673/220820476-aa6f407e-9018-422b-9dcd-0bf29b3b7774.png)
+  
+  As you can see, in GitHub, the "index1" is now "index2". This means the changes have been updated and we're successful!
+  
+  ![image](https://user-images.githubusercontent.com/122491673/220820632-6a9c0791-3c12-4121-b1ea-079dca8653cd.png)
+
+---
+
+With that, we're done! You've learned how to update files and push those updates to GitHub all in the terminal. I hope this was helpful!
