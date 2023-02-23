@@ -93,7 +93,7 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 
   While there is an error displayed, our compiling and running were successful, meaning we can move onto actually fixing that error. 
   
-  ## Step 6: Editting in Terminal
+## Step 6: Editting in Terminal
   Since we know the error is located in `ListExamples.java`, we're going to open it up and find the error. We can view and edit the contents of the file using the `nano` command. I type: 
   
   `nano ListExamples.java`
@@ -112,7 +112,7 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 
   To exit, use `<ctrl + X>` and it will immediately exit the display and return you to the normal terminal.
   
-  ## Step 7: Rerun the Tests
+## Step 7: Rerun the Tests
   We'll just be repeating **Step 5** but we'll be getting a different result. As with **Step 5**, we'll use:
   
   ```
@@ -124,7 +124,7 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
   
   ![image](https://user-images.githubusercontent.com/122491673/220818423-2462ce61-3614-4114-92f7-402692e8059c.png)
 
-  ## Step 8: Committing and Pushing to GitHub
+## Step 8: Committing and Pushing to GitHub
   Now that we've fixed the error and the test runs fine, we'll have to commit our updates and push them to GitHub. Committing our updates is like confirming the changes we've made and pushing is the same as sending those confirmed changes back to GitHub. 
   
   Before we can commit or push, we first have to add the file we've changed. To do so, we use the `git add` command:
