@@ -49,7 +49,39 @@ It's a lengthy process that must be done before creating this script, so I sugge
 
 ```
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
-java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples > run-output.txt
 ```
 
-**Step 4** is fixing the code, which is a little bit different than our steps in Lab Report 4.
+You may notice a slight difference in the commands compared to those used in Lab 4. I've added `> run-output.txt` to the end of the run command to make the output into a file. 
+By doing this, we can display the contents of the file using `cat run-output.txt`.
+
+**Step 4** is fixing the code, which is a little bit different than our steps in Lab Report 4. Rather than using `nano`, which wouldn't be as helpful in a script, we have to directly change the part of `ListExamples.java` that contains the error. 
+
+**Step 5** is the same Step 3, except it's successful this time around.
+
+**Step 6** is achieved using three commands in succession. 
+
+```
+git add ListExamples.java
+git commit -m "Fixed ListExamples.java"
+git push
+```
+
+This adds the change, commits it, and pushes the commit back to GitHub. Thus, completing the steps.
+
+## Overview
+That's it! I'll include the final script and it's outputs/changes below. I hope you found this helpful and thanks for reading!
+
+Here's the final script `debug.sh`: 
+
+```
+
+```
+
+Here's the output:
+
+
+
+Here's ListExamples.java before and after the script is run:
+
+![image](https://user-images.githubusercontent.com/122491673/223867344-34f38285-354a-46a6-b93e-7e06f5159f3d.png)
