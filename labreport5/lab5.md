@@ -2,7 +2,7 @@
 For this lab report, I'll be going over the process of turning Lab 7 into a script!
 I've previously went over Lab 7's process in [Lab Report 4](https://dylantrann.github.io/cse15l-lab-reports/labreport4/lab4.html).
 Lab Report 4 consisted of a 9 step process, which is pretty lengthy and contains a lot of exact commands and clicks. 
-Now that we're comfortable with scripts, it can be easily condensed and made reusable.
+Now that we're comfortable with scripts, it can be easily condensed and simplified for the user.
 
 We're going to do everything on VSCode, since that's how it would be done manually during the timed trial.
 
