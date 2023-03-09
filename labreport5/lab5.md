@@ -16,7 +16,7 @@ Press this button located above your current working directory to create a new f
 You will see a new text box appear above your current directories files, which is prompting you to name the file.
 When naming the file, the name does not matter as long as you add the extension `.sh` after the name.
 In my case, I'm naming the file `debug.sh`, as it debugs the file. 
-You will know you correctly made a script file when it has the gree icon show on the right of the file name.
+You will know you correctly made a script file when it has the green icon show on the right of the file name.
 
 ![image](https://user-images.githubusercontent.com/122491673/223856851-6a9790b6-3eb5-4799-aaf1-6ebc4ead827f.png)
 
