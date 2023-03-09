@@ -161,7 +161,7 @@ git commit -m "Fixed ListExamples.java"
 git push
 ```
 
-Here's ListExamples.java before and after the script is run:
+Here's `ListExamples.java` before and after the script is run:
 
 ![image](https://user-images.githubusercontent.com/122491673/223867344-34f38285-354a-46a6-b93e-7e06f5159f3d.png)
 
